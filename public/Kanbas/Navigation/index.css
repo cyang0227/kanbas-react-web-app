@@ -14,6 +14,9 @@
   .wd-kanbas-navigation li.wd-active a {
     color: red;
   }
+  .wd-kanbas-navigation li.wd-account a i{
+    color: white;
+  }
   .wd-kanbas-navigation a {
     color: white;
     text-decoration: none;
