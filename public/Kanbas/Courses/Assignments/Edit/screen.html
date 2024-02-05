@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
     <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
   </head>
   <body>
     <table>
@@ -74,12 +75,12 @@
           </td>
           <td>
             <form action="/Kanbas/Courses/Assignments/screen.html">
-              <select>
+              <select class="form-select">
                 <option>Speed Grader</option>
               </select>
               <hr />
-              <h4>Assignment Name</h4>
-              <input placeholder="A1 - ENV + HTML" />
+              <h5>Assignment Name</h5>
+              <input class="form-control" placeholder="A1 - ENV + HTML" />
               <br />
               <textarea
                 placeholder="This is the assignment description"
@@ -87,11 +88,11 @@
               <br />
               <br />
               <label for="points">Points</label>
-              <input id="points" placeholder="100" />
+              <input id="points" class="form-control" placeholder="100" />
               <br />
               <br />
-              <label>Assignment Group</label>
-              <select>
+              <label for="assignment-group">Assignment Group</label>
+              <select id="assignment-group" class="form-select">
                 <option>ASSIGNMENTS</option>
                 <option>QUIZZES</option>
                 <option>EXAMS</option>
@@ -99,16 +100,16 @@
               </select>
               <br />
               <br />
-              <label>Display Grade as</label>
-              <select>
+              <label for="grade-display">Display Grade as</label>
+              <select id="grade-display" class="form-select">
                 <option>Percentage</option>
                 <option>Points</option>
                 <option>Complete/Incomplete</option>
               </select>
               <br />
               <br />
-              <label>Submission Type</label>
-              <select>
+              <label for="submission-type">Submission Type</label>
+              <select id="submission-type" class="form-select">
                 <option>Online</option>
                 <option>No Submission</option>
                 <option>On Paper</option>
@@ -117,26 +118,40 @@
               <br />
               <br />
               <label>Online Entry Options</label><br />
-              <label
-                ><input type="checkbox" name="online-entry-options" />Text
-                Entry</label
-              ><br />
-              <label
-                ><input type="checkbox" name="online-entry-options" />Website
-                URL</label
-              ><br />
-              <label
-                ><input type="checkbox" name="online-entry-options" />Media
-                Recordings</label
-              ><br />
-              <label
-                ><input type="checkbox" name="online-entry-options" />Student
-                Annotation</label
-              ><br />
-              <label
-                ><input type="checkbox" name="online-entry-options" />File
-                Uploads</label
-              ><br />
+              
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="text-entry">
+                <label class="form-check-label" for="text-entry">
+                  Text Entry
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="website-entry">
+                <label class="form-check-label" for="website-entry">
+                  Website URL
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="media-entry">
+                <label class="form-check-label" for="media-entry">
+                  Media Recordings
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="student-entry">
+                <label class="form-check-label" for="student-entry">
+                  StudentAnnotation
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="file-entry">
+                <label class="form-check-label" for="file-entry">
+                  File Uploads
+                </label>
+              </div>
+
+
+          
               <br />
               <lable>Assign</lable><br />
               <label>Assign to</label><br />

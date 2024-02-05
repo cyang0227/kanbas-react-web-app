@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+  </head>
+  <body>
+    <!-- Implement links to Kanbas and Course Navigation -->
+    <div class="d-flex">
+      <div class="d-none d-md-block">
+        <!-- Copy Kanbas Navigation Here -->
+        <ul class="wd-kanbas-navigation">
+          <li><a href="https://northeastern.edu">N</a></li>
+          <li class="wd-account">
+            <a href="/Kanbas/Account/Profile/screen.html">
+              <i class="fa fa-user"></i>Account</a
+            >
+          </li>
+          <li class="wd-active">
+            <a href="/Kanbas/Dashboard/screen.html">
+              <i class="fa fa-tachometer"></i>Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Home/screen.html">
+              <i class="fa fa-book"></i>Courses</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-calendar"></i>Calendar</a>
+          </li>
+          <li>
+            <a href="#"> <i class="fa fa-inbox fa-3x"></i><br />Inbox</a>
+          </li>
+          <li>
+            <a href="#"> <i class="fa fa-history"></i>History</a>
+          </li>
+          <li>
+            <a href="#"> <i class="fa fa-video-camera"></i>Studio</a>
+          </li>
+          <li>
+            <a href="#"> <i class="fa fa-caret-square-o-right"></i>Commons</a>
+          </li>
+          <li>
+            <a href="#"> <i class="fa fa-question-circle"></i><br />Help</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-md-block">
+        <!-- Copy Course Navigation Here -->
+        <ul class="wd-navigation">
+          <li class="wd-active">
+            <a href="/Kanbas/Courses/Home/screen.html"> Home</a>
+          </li>
+          <li><a href="/Kanbas/Courses/Modules/screen.html"> Modules</a></li>
+          <li><a href="#"> Piazza</a></li>
+          <li><a href="/Kanbas/Courses/Grades/screen.html"> Grades</a></li>
+          <li>
+            <a href="/Kanbas/Courses/Assignments/screen.html"> Assignments</a>
+          </li>
+          <li><a href="#"> Quizzes</a></li>
+          <li><a href="#"> People</a></li>
+          <li><a href="#"> Panopto Video</a></li>
+          <li><a href="#"> Discussions</a></li>
+          <li><a href="#"> Announcements</a></li>
+          <li><a href="#"> Pages</a></li>
+          <li><a href="#"> Files</a></li>
+          <li><a href="#"> Rubrics</a></li>
+          <li><a href="#"> Outcomes</a></li>
+          <li><a href="#"> Collaborations</a></li>
+          <li><a href="#"> Syllabus</a></li>
+          <li><a href="#"> Settings</a></li>
+        </ul>
+      </div>
+      <div class="flex-fill">
+        <!-- Copy Assignment Edit here -->
+        <form action="/Kanbas/Courses/Assignments/screen.html">
+            <select class="form-select">
+              <option>Speed Grader</option>
+            </select>
+            <hr />
+            <h5>Assignment Name</h5>
+            <input class="form-control" placeholder="A1 - ENV + HTML" />
+            <br />
+            <textarea
+              placeholder="This is the assignment description"
+            ></textarea>
+            <br />
+            <br />
+            <label for="points">Points</label>
+            <input id="points" class="form-control" placeholder="100" />
+            <br />
+            <br />
+            <label for="assignment-group">Assignment Group</label>
+            <select id="assignment-group" class="form-select">
+              <option>ASSIGNMENTS</option>
+              <option>QUIZZES</option>
+              <option>EXAMS</option>
+              <option>PROJECTS</option>
+            </select>
+            <br />
+            <br />
+            <label for="grade-display">Display Grade as</label>
+            <select id="grade-display" class="form-select">
+              <option>Percentage</option>
+              <option>Points</option>
+              <option>Complete/Incomplete</option>
+            </select>
+            <br />
+            <br />
+            <label for="submission-type">Submission Type</label>
+            <select id="submission-type" class="form-select">
+              <option>Online</option>
+              <option>No Submission</option>
+              <option>On Paper</option>
+              <option>External Tool</option>
+            </select>
+            <br />
+            <br />
+            <label>Online Entry Options</label><br />
+            
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="text-entry">
+              <label class="form-check-label" for="text-entry">
+                Text Entry
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="website-entry">
+              <label class="form-check-label" for="website-entry">
+                Website URL
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="media-entry">
+              <label class="form-check-label" for="media-entry">
+                Media Recordings
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="student-entry">
+              <label class="form-check-label" for="student-entry">
+                StudentAnnotation
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="file-entry">
+              <label class="form-check-label" for="file-entry">
+                File Uploads
+              </label>
+            </div>
+
+						
+
+
+				</form>
+
+      </div>
+
+</body>
