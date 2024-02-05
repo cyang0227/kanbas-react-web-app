@@ -4,24 +4,231 @@
     <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
     <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+  </head>
+  <body>
+    <!-- Implement links to Kanbas and Course Navigation -->
+    <div class="d-flex">
+      <div class="d-none d-md-block">
+        <!-- Copy Kanbas Navigation Here -->
+        <ul class="wd-kanbas-navigation">
+          <li><a href="https://northeastern.edu">N</a></li>
+          <li class="wd-account">
+            <a href="/Kanbas/Account/Profile/screen.html">
+              <i class="fa fa-user"></i>Account</a
+            >
+          </li>
+          <li class="wd-active">
+            <a href="/Kanbas/Dashboard/screen.html">
+              <i class="fa fa-tachometer"></i>Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Home/screen.html">
+              <i class="fa fa-book"></i>Courses</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-calendar"></i>Calendar</a>
+          </li>
+          <li>
+            <a href="#"> <i class="fa fa-inbox fa-3x"></i><br />Inbox</a>
+          </li>
+          <li>
+            <a href="#"> <i class="fa fa-history"></i>History</a>
+          </li>
+          <li>
+            <a href="#"> <i class="fa fa-video-camera"></i>Studio</a>
+          </li>
+          <li>
+            <a href="#"> <i class="fa fa-caret-square-o-right"></i>Commons</a>
+          </li>
+          <li>
+            <a href="#"> <i class="fa fa-question-circle"></i><br />Help</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-md-block">
+        <!-- Copy Course Navigation Here -->
+        <ul class="wd-navigation">
+          <li class="wd-active">
+            <a href="/Kanbas/Courses/Home/screen.html"> Home</a>
+          </li>
+          <li><a href="/Kanbas/Courses/Modules/screen.html"> Modules</a></li>
+          <li><a href="#"> Piazza</a></li>
+          <li><a href="/Kanbas/Courses/Grades/screen.html"> Grades</a></li>
+          <li>
+            <a href="/Kanbas/Courses/Assignments/screen.html"> Assignments</a>
+          </li>
+          <li><a href="#"> Quizzes</a></li>
+          <li><a href="#"> People</a></li>
+          <li><a href="#"> Panopto Video</a></li>
+          <li><a href="#"> Discussions</a></li>
+          <li><a href="#"> Announcements</a></li>
+          <li><a href="#"> Pages</a></li>
+          <li><a href="#"> Files</a></li>
+          <li><a href="#"> Rubrics</a></li>
+          <li><a href="#"> Outcomes</a></li>
+          <li><a href="#"> Collaborations</a></li>
+          <li><a href="#"> Syllabus</a></li>
+          <li><a href="#"> Settings</a></li>
+        </ul>
+      </div>
+      <div class="flex-fill">
+        <!-- Copy Course Home here -->
+        <button type="button" class="btn btn-outline-secondary btn-sm">
+          Collapse All
+        </button>
+        <button type="button" class="btn btn-outline-secondary btn-sm">
+          View Progress
+        </button>
+        <button type="button" class="btn btn-outline-secondary btn-sm">
+          Module
+        </button>
+        <hr />
+        <ul class="list-group wd-modules">
+          <li class="list-group-item">
+            <div>
+              <i class="fa fa-ellipsis-v"></i> Week 0 - INTRO
+              <span class="float-end">
+                <i class="fa fa-check-circle text-success"></i>
+                <i class="fa fa-plus ms-2"></i>
+                <i class="fa fa-ellipsis-v ms-2"></i>
+              </span>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <i class="fa fa-ellipsis-v"></i> LEARNING OBJECTIVES
+                <span class="float-end">
+                  <i class="fa fa-check-circle text-success"></i>
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
+            </ul>
+            <ul class="list-group">
+              <li class="list-group-item">
+                Introduction to the course
+                <span class="float-end">
+                  <i class="fa fa-check-circle text-success"></i>
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
+            </ul>
+            <ul class="list-group">
+              <li class="list-group-item">
+                Learn what is Web Development
+                <span class="float-end">
+                  <i class="fa fa-check-circle text-success"></i>
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
+            </ul>
+            <ul class="list-group">
+              <li class="list-group-item">
+                Creating a development environment
+                <span class="float-end">
+                  <i class="fa fa-check-circle text-success"></i>
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
+            </ul>
+            <ul class="list-group">
+              <li class="list-group-item">
+                Creating a Web Application
+                <span class="float-end">
+                  <i class="fa fa-check-circle text-success"></i>
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
+            </ul>
+            <ul class="list-group">
+              <li class="list-group-item">
+                Getting started with the 1st assignment
+                <span class="float-end">
+                  <i class="fa fa-check-circle text-success"></i>
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
+            </ul>
+          </li>
+
+          <li class="list-group-item">
+            <div>
+              <i class="fa fa-ellipsis-v"></i> Week 1 - HTML
+              <span class="float-end">
+                <i class="fa fa-plus ms-2"></i>
+                <i class="fa fa-ellipsis-v ms-2"></i>
+              </span>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <i class="fa fa-ellipsis-v"></i> LEARNING OBJECTIVES
+                <span class="float-end">
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
+            </ul>
+            <ul class="list-group">
+              <li class="list-group-item">
+                Learn how to create user interfaces with HTML
+                <span class="float-end">
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
+            </ul>
+            <ul class="list-group">
+              <li class="list-group-item">
+                Keep working on assignment 1
+                <span class="float-end">
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
+            </ul>
+            <ul class="list-group">
+              <li class="list-group-item">
+                Deploy the assignment to Netlify
+                <span class="float-end">
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="flex-grow-0 me-2 d-none d-lg-block" style="width: 250px">
+        <h3>Course Status</h3>
+        <!-- Implement Course Status here -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <html>
+  <head>
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
   </head>
   <body>
     <table width="100%">
       <tbody>
         <tr>
           <td valign="top">
-            <!--Kanbas Navigation-->
             <ul class="wd-kanbas-navigation">
               <li><a href="https://northeastern.edu">N</a></li>
               <li class="wd-account">
                 <a href="/Kanbas/Account/Profile/screen.html">
                   <i class="fa fa-user"></i>Account</a></li>
-              <li class="wd-active">
+              <li>
                 <a href="/Kanbas/Dashboard/screen.html">
                   <i class="fa fa-tachometer"></i>Dashboard
                 </a>
               </li>
-              <li>
+              <li class="wd-active">
                 <a href="/Kanbas/Courses/Home/screen.html">
                   <i class="fa fa-book"></i>Courses</a>
               </li>
@@ -45,12 +252,11 @@
             </ul>
           </td>
           <td valign="top">
-            <!--Course Navigation-->
             <ul class="wd-navigation">
                 <li class="wd-active">
                   <a href="/Kanbas/Courses/Home/screen.html"> Home</a>
                 </li>
-                <li><a href="/Kanbas/Courses/Modules/screen.html"> Modules</a></li>
+                <li><a href="#"> Modules</a></li>
                 <li><a href="#"> Piazza</a></li>
                 <li><a href="/Kanbas/Courses/Grades/screen.html"> Grades</a></li>
                 <li>
@@ -71,7 +277,6 @@
               </ul>
           </td>
           <td valign="top">
-            <!--Home Modules-->
             <button>Collapse All</button>
             <button>View Progress</button>
             <select>
@@ -141,7 +346,6 @@
           </td>
           <td valign="top">
             <h4>Course Status</h4>
-            <!--Course Status-->
             <table>
               <tbody>
                 <tr>
@@ -156,17 +360,17 @@
             </table>
             <ul>
               <li>
-                <a href="/Kanbas/Courses/xxx.html">Import Existing Content</a>
+                <a href="#">Import Existing Content</a>
               </li>
               <li>
-                <a href="/Kanbas/Courses/xxx.html">Import From Commons</a>
+                <a href="#">Import From Commons</a>
               </li>
-              <li><a href="/Kanbas/Courses/xxx.html">Choose Home Page</a></li>
-              <li><a href="/Kanbas/Courses/xxx.html">View Course Stream</a></li>
-              <li><a href="/Kanbas/Courses/xxx.html">New Announcements</a></li>
-              <li><a href="/Kanbas/Courses/xxx.html">New Analytics</a></li>
+              <li><a href="#">Choose Home Page</a></li>
+              <li><a href="#">View Course Stream</a></li>
+              <li><a href="#">New Announcements</a></li>
+              <li><a href="#">New Analytics</a></li>
               <li>
-                <a href="/Kanbas/Courses/xxx.html">View Course Notification</a>
+                <a href="#">View Course Notification</a>
               </li>
             </ul>
             <h4>Coming Up</h4>
@@ -194,3 +398,4 @@
     </table>
   </body>
 </html>
+-->
