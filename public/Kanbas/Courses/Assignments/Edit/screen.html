@@ -78,169 +78,210 @@
       <div class="flex-fill p-4">
         <!-- Copy Assignment Edit here -->
         <form action="/Kanbas/Courses/Assignments/screen.html">
-            <select class="form-select">
-              <option>Speed Grader</option>
-            </select>
-            <hr />
-            <h5>Assignment Name</h5>
-            <input class="form-control" placeholder="A1 - ENV + HTML" />
+          <select class="form-select">
+            <option>Speed Grader</option>
+          </select>
+          <hr />
+          <h5>Assignment Name</h5>
+          <input class="form-control" placeholder="A1 - ENV + HTML" />
+          <br />
+          <textarea
+            rows="5"
+            class="form-control"
+            placeholder="This is the assignment description"
+          ></textarea>
+          <br />
+
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-4">
+                <div class="float-end">
+                  <label for="points">Points</label>
+                </div>
+              </div>
+              <div class="col-8">
+                <input id="points" class="form-control" placeholder="100" />
+              </div>
+            </div>
+
+            <div class="row align-items-center">
+              <div class="col-4">
+                <div class="float-end">
+                  <label for="assignment-group">Assignment Group</label>
+                </div>
+              </div>
+              <div class="col-8">
+                <select id="assignment-group" class="form-select">
+                  <option>ASSIGNMENTS</option>
+                  <option>QUIZZES</option>
+                  <option>EXAMS</option>
+                  <option>PROJECTS</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row align-items-center">
+              <div class="col-4">
+                <div class="float-end">
+                  <label for="grade-display">Display Grade as</label>
+                </div>
+              </div>
+              <div class="col-8">
+                <select id="grade-display" class="form-select">
+                  <option>Percentage</option>
+                  <option>Points</option>
+                  <option>Complete/Incomplete</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row align-items-center">
+              <div class="col-4">
+                <div class="float-end">
+                  <label for="submission-type">Submission Type</label>
+                </div>
+              </div>
+              <div class="col-8">
+                <select id="submission-type" class="form-select">
+                  <option>Online</option>
+                  <option>No Submission</option>
+                  <option>On Paper</option>
+                  <option>External Tool</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row align-items-center">
+              <div class="col-4">
+                <div class="float-end">
+                  <label for="entry-options">Online Entry Options</label>
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="text-entry"
+                  />
+                  <label class="form-check-label" for="text-entry">
+                    Text Entry
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="website-entry"
+                  />
+                  <label class="form-check-label" for="website-entry">
+                    Website URL
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="media-entry"
+                  />
+                  <label class="form-check-label" for="media-entry">
+                    Media Recordings
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="student-entry"
+                  />
+                  <label class="form-check-label" for="student-entry">
+                    StudentAnnotation
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="file-entry"
+                  />
+                  <label class="form-check-label" for="file-entry">
+                    File Uploads
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row align-items-top">
+              <div class="col-4">
+                <div class="float-end">
+                  <label for="assign">Assign</label>
+                </div>
+              </div>
+              <div class="col-8">
+                <label for="assign-to"><b>Assign to</b></label>
+                <select id="assign-to" class="form-select">
+                  <option>Everyone</option>
+                  <option>John Doe</option>
+                  <option>Jane Doe</option>
+                  <option>Alice Wonderland</option>
+                  <option>Chris Brown</option>
+                </select>
+                <br />
+                <label for="due"><b>Due</b></label>
+                <input
+                  class="form-control"
+                  id="due"
+                  type="date"
+                  value="2024-01-01"
+                />
+                <br />
+                <div class="row">
+                  <div class="col-6">
+                    <label for="available-from"><b>Available From</b></label>
+                  </div>
+                  <div class="col-4">
+                    <label for="until"><b>Until</b></label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-6">
+                    <input
+                      class="form-control"
+                      id="available-from"
+                      type="date"
+                      value="2024-01-01"
+                    />
+                  </div>
+                  <div class="col-6">
+                    <input
+                      class="form-control"
+                      id="until"
+                      type="date"
+                      value="2024-01-01"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
             <br />
-            <textarea rows="5" class="form-control"
-              placeholder="This is the assignment description"
-            ></textarea>
-            <br />
-
-						<div class="container">
-							<div class="row align-items-center">
-								<div class="col-4">
-									<div class="float-end">
-										<label for="points">Points</label>
-									</div>
-								</div>
-								<div class="col-8">
-									<input id="points" class="form-control" placeholder="100" />
-								</div>
-							</div>
-
-
-							<div class="row align-items-center">
-								<div class="col-4">
-									<div class="float-end">
-										<label for="assignment-group">Assignment Group</label>
-									</div>
-								</div>
-								<div class="col-8">
-									<select id="assignment-group" class="form-select">
-										<option>ASSIGNMENTS</option>
-										<option>QUIZZES</option>
-										<option>EXAMS</option>
-										<option>PROJECTS</option>
-									</select>
-								</div>
-							</div>
-
-							<div class="row align-items-center">
-								<div class="col-4">
-									<div class="float-end">
-										<label for="grade-display">Display Grade as</label>
-									</div>
-								</div>
-								<div class="col-8">
-									<select id="grade-display" class="form-select">
-										<option>Percentage</option>
-										<option>Points</option>
-										<option>Complete/Incomplete</option>
-									</select>
-								</div>
-							</div>
-
-							<div class="row align-items-center">
-								<div class="col-4">
-									<div class="float-end">
-										<label for="submission-type">Submission Type</label>
-									</div>
-								</div>
-								<div class="col-8">
-									<select id="submission-type" class="form-select">
-										<option>Online</option>
-										<option>No Submission</option>
-										<option>On Paper</option>
-										<option>External Tool</option>
-									</select>
-								</div>
-							</div>
-
-							<div class="row align-items-center">
-								<div class="col-4">
-									<div class="float-end">
-										<label for="entry-options">Online Entry Options</label>
-									</div>
-								</div>
-								<div class="col-8">
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="text-entry">
-										<label class="form-check-label" for="text-entry">
-											Text Entry
-										</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="website-entry">
-										<label class="form-check-label" for="website-entry">
-											Website URL
-										</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="media-entry">
-										<label class="form-check-label" for="media-entry">
-											Media Recordings
-										</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="student-entry">
-										<label class="form-check-label" for="student-entry">
-											StudentAnnotation
-										</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="file-entry">
-										<label class="form-check-label" for="file-entry">
-											File Uploads
-										</label>
-									</div>
-								</div>
-							</div>
-
-							<div class="row align-items-top">
-								<div class="col-4">
-									<div class="float-end">
-										<label for="assign">Assign</label>
-									</div>
-								</div>
-								<div class="col-8" >
-										<label for="assign-to"><b>Assign to</b></label>
-										<select id="assign-to" class="form-select">
-											<option>Everyone</option>
-											<option>John Doe</option>
-											<option>Jane Doe</option>
-											<option>Alice Wonderland</option>
-											<option>Chris Brown</option>
-										</select>
-										<br />
-										<label for="due"><b>Due</b></label>
-										<input class="form-control" id="due" type="date" value="2024-01-01" />
-										<br />
-										<div class="row">
-											<div class="col-6">
-												<label for="available-from"><b>Available From</b></label>
-											</div>
-											<div class="col-4">
-												<label for="until"><b>Until</b></label>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-6">
-												<input class="form-control" id="available-from" type="date" value="2024-01-01" />
-											</div>
-											<div class="col-6">
-												<input class="form-control" id="until" type="date" value="2024-01-01" />
-											</div>
-										</div>
-								</div>
-						</div>
-						<br />
-						<!--buttons-->
-						<div class="row justify-content-end align-items-center">
-							<div class="col p-4">
-								<div class="float-end">
-									<button class="btn btn-secondary">Cancel</button>
-									<button class="btn btn-danger">Save</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</form>
+            <!--buttons-->
+            <div class="row justify-content-end align-items-center">
+              <div class="col p-4">
+                <div class="float-end">
+                  <button class="btn btn-secondary">Cancel</button>
+                  <button class="btn btn-danger">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
-		</div>
-	</body>
+    </div>
+  </body>
 </html>

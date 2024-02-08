@@ -23,4 +23,12 @@
     color: red;
     text-decoration: none;
   }
+  .breadcrumb li{
+    padding-left: 25px;
+  }
+  .breadcrumb li a{
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+  }
   
