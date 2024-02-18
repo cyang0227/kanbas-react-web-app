@@ -10,6 +10,16 @@ import FunctionParenthesisAndParameters from "./functions/FunctionParenthesisAnd
 import WorkingWithArrasys from "./arrays/WorkingWithArrays";
 import AddingAndRemovingDataToFromArrays from "./arrays/AddingAndRemovingDataToFromArrays";
 import ForLoops from "./arrays/ForLoops";
+import MapFunction from "./arrays/MapFunction";
+import JsonStringfy from "./json/JsonStringify";
+import FindFunction from "./arrays/FindFunction";
+import FindIndex from "./arrays/FindIndex";
+import FilterFunction from "./arrays/FilterFunction";
+import TemplateLiterals from "./string/TemplateLiterals";
+import House from "./json/House";
+import Spreading from "./json/Spreading";
+import Destructing from "./json/Destructing";
+import FunctionDestructing from "./functions/FunctionDestructing";
 function JavaScript() {
   console.log("Hello World!");
   return (
@@ -27,6 +37,16 @@ function JavaScript() {
       <WorkingWithArrasys />
       <AddingAndRemovingDataToFromArrays />
       <ForLoops />
+      <MapFunction />
+      <JsonStringfy />
+      <FindFunction />
+      <FindIndex />
+      <FilterFunction />
+      <TemplateLiterals />
+      <House />
+      <Spreading />
+      <Destructing />
+      <FunctionDestructing />
     </div>
   );
 }
