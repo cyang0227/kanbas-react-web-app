@@ -10,11 +10,20 @@ function ModuleList() {
   return (
     <>
       {/* <!-- Add buttons here --> */}
+      <div className="d-flex justify-content-end">
+        <button className="btn btn-outline-secondary">Collapse All</button>
+        <button className="btn btn-outline-secondary">View Progress</button>
+        <button className="btn btn-outline-secondary">Publish All</button>
+        <button className="btn btn-danger">+Module</button>
+      </div>
+
       <ul className="list-group wd-modules">
         {modulesList.map((module, index) => (
-          <li key={index}
+          <li
+            key={index}
             className="list-group-item"
-            onClick={() => setSelectedModule(module)}>
+            onClick={() => setSelectedModule(module)}
+          >
             <div>
               <FaEllipsisV className="me-2" />
               {module.name}
