@@ -54,6 +54,7 @@ function ModuleList() {
       <ul className="list-group wd-modules">
         <li className="list-group-item">
           <button
+            className="btn btn-danger"
             onClick={() => {
               dispatch(addModule({ ...module, course: courseId }));
             }}
@@ -61,15 +62,17 @@ function ModuleList() {
             Add
           </button>
           <button
+            className="btn btn-success"
             onClick={() => {
               dispatch(updateModule(module));
             }}
           >
             Update
           </button>
-
+          <br />
           <input
             value={module.name}
+            size={50}
             onChange={(e) =>
               dispatch(
                 setModule({
@@ -79,8 +82,11 @@ function ModuleList() {
               )
             }
           />
+          <br />
           <textarea
             value={module.description}
+            rows={4}
+            cols={53}
             onChange={(e) =>
               dispatch(
                 setModule({
@@ -96,9 +102,18 @@ function ModuleList() {
           .filter((module) => module.course === courseId)
           .map((module, index) => (
             <li key={index} className="list-group-item">
-              <button 
-                onClick={() => dispatch(setModule(module))}>Edit</button>
-              <button onClick={() => dispatch(deleteModule(module._id))}>Delete</button>
+              <button
+                className="btn btn-warning"
+                onClick={() => dispatch(setModule(module))}
+              >
+                Edit
+              </button>
+              <button
+                className="btn btn-secondary"
+                onClick={() => dispatch(deleteModule(module._id))}
+              >
+                Delete
+              </button>
               <h3>{module.name}</h3>
               <p>{module.description}</p>
             </li>
