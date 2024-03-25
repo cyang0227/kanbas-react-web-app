@@ -16,39 +16,6 @@ function ModuleList() {
   );
   const dispatch = useDispatch();
 
-  // const [moduleList, setModuleList] = useState<any[]>(modules);
-
-  // const [module, setModule] = useState({
-  //   name: "New Module",
-  //   description: "New Description",
-  //   course: courseId,
-  //   _id: new Date().getTime().toString(),
-  // });
-
-  // const updateModule = () => {
-  //   const newModuleList = moduleList.map((m) => {
-  //     if (m._id === module._id) {
-  //       return module;
-  //     } else {
-  //       return m;
-  //     }
-  //   });
-  //   setModuleList(newModuleList);
-  // };
-
-  // const addModule = (module: any) => {
-  //   const newModule = { ...module, _id: new Date().getTime().toString() };
-  //   const newModuleList = [newModule, ...moduleList];
-  //   setModuleList(newModuleList);
-  // };
-
-  // const deleteModule = (moduleId: string) => {
-  //   const newModuleList = moduleList.filter(
-  //     (module) => module._id !== moduleId
-  //   );
-  //   setModuleList(newModuleList);
-  // };
-
   return (
     <>
       <ul className="list-group wd-modules">
@@ -62,7 +29,7 @@ function ModuleList() {
             Add
           </button>
           <button
-            className="btn btn-success"
+            className="btn btn-warning"
             onClick={() => {
               dispatch(updateModule(module));
             }}
@@ -103,13 +70,13 @@ function ModuleList() {
           .map((module, index) => (
             <li key={index} className="list-group-item">
               <button
-                className="btn btn-warning"
+                className="btn btn-success"
                 onClick={() => dispatch(setModule(module))}
               >
                 Edit
               </button>
               <button
-                className="btn btn-secondary"
+                className="btn btn-danger"
                 onClick={() => dispatch(deleteModule(module._id))}
               >
                 Delete
