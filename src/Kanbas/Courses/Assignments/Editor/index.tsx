@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { assignments } from "../../../Database";
 import { KanbasState } from "../../../store";
@@ -7,20 +7,32 @@ import {
   addAssignment,
   deleteAssignment,
   updateAssignment,
-  selectAsssignment,
-  setAssignment,
+  selectAssignment,
 } from "../assignmentsReducer";
 
 function AssignmentEditor() {
   const { assignmentId } = useParams();
-  const assignment = useSelector((state: KanbasState) => state.assignmentReducer.assignment);
   const { courseId } = useParams();
+  const [assignment, setAssignment] = useState({
+    title: "New Assignment",
+    description: "New Description",
+    due: "",
+    points: 100,
+  });
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleSave = () => {
-    console.log("Actually saving assignment TBD in later assignments");
+    dispatch(updateAssignment(assignment));
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
-  const dispatch = useDispatch();
+  
+  const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
+    const { name, value } = e.target;
+    setAssignment((prevAssignment) => ({
+        ...prevAssignment,
+        [name]: value,
+    }));
+};
 
   return (
     <div>
@@ -34,23 +46,20 @@ function AssignmentEditor() {
 
           <div className="row mb-3">
             <input
+              type="text"
+              name="title"
               id="assignmentName"
               value={assignment?.title}
               className="form-control"
-              onChange={(e) =>
-                dispatch(
-                  setAssignment({
-                    ...assignment,
-                    title: e.target.value,
-                  })
-                )
-              }
+              onChange={handleInputChange}
             />
           </div>
 
           <div className="row mb-3">
             <textarea
+              name="description"
               rows={3}
+              onChange={handleInputChange}
               placeholder="Assignment Description"
               className="form-control"
             />
@@ -67,6 +76,8 @@ function AssignmentEditor() {
 
             <div className="col-md-8">
               <input
+                name="points"
+                onChange={handleInputChange}
                 type="number"
                 id="points"
                 defaultValue={100}
@@ -127,7 +138,9 @@ function AssignmentEditor() {
           </div>
 
           <button
-            onClick={handleSave}
+            onClick={() => {
+              handleSave();
+            }}
             className="btn btn-danger ms-2 float-end"
           >
             Save

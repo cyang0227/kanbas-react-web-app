@@ -4,12 +4,8 @@ import { assignments } from "../../Database";
 const initialState = {
   assignments: assignments,
   assignment: { 
-    name: "New Assignment", 
+    title: "New Assignment", 
     description: "New Description",
-    dueDate: new Date().toISOString(),
-    points: 100,
-    availableFromDate: new Date().toISOString(),
-    availableUntilDate: new Date().toISOString(),
    },
 };
 
@@ -37,15 +33,12 @@ const assignmentsSlice = createSlice({
         }
       });
     },
-    selectAsssignment: (state, action) => {
-      state.assignment = action.payload;
-    },
-    setAssignment: (state, action) => {
+    selectAssignment: (state, action) => {
       state.assignment = action.payload;
     },
   },
 });
 
-export const { addAssignment, deleteAssignment, updateAssignment, selectAsssignment, setAssignment } =
+export const { addAssignment, deleteAssignment, updateAssignment, selectAssignment } =
   assignmentsSlice.actions;
 export default assignmentsSlice.reducer;

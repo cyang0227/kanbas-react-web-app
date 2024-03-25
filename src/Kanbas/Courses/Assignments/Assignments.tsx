@@ -1,37 +1,46 @@
 import React from "react";
+import { useState } from "react";
 import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
-import { Link, useParams } from "react-router-dom";
-import { assignments } from "../../Database";
+import { Link, Route, useParams, useNavigate } from "react-router-dom";
 import { KanbasState } from "../../store";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addAssignment,
   deleteAssignment,
   updateAssignment,
-  selectAsssignment,
+  selectAssignment,
 } from "./assignmentsReducer";
 
 function AssignmentList() {
   const { courseId } = useParams();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [assignmentToDelete, setAssignmentToDelete] = useState(null);
   const assignmentsList = useSelector(
-    (state: KanbasState) => state.assignmentReducer.assignments
+    (state: KanbasState) => state.assignmentReducer.assignments.filter(
+        (assignment) => assignment.course === courseId
+    )
   );
-  const assignment = useSelector(
-    (state: KanbasState) => state.assignmentReducer.assignment
-  );
+  
+
+  const newAssignmentEditor = () => {
+    navigate(`/Kanbas/Courses/${courseId}/Assignments/new`);
+  };
+
+  const handleDelete = (assignment:any) => {
+    setAssignmentToDelete(assignment);
+  };
 
   return (
     <>
       <div className="d-flex justify-content-end p-2 mr-3">
-        <button
-          className="btn btn-danger"
-          onClick={() =>
-            dispatch(addAssignment({ ...assignment, course: courseId }))
-          }
+        <Link
+          to={`/Kanbas/Courses/${courseId}/Assignments/{assignment._id}`}
+          className="btn btn-danger float-end"
+          onClick={newAssignmentEditor}
         >
           + Assignment
-        </button>
+        </Link>
       </div>
 
       <ul className="list-group wd-modules">
