@@ -18,7 +18,7 @@ function AssignmentEditor() {
         <div className="container-fluid">
           <div className="row">
             <label htmlFor="assignmentName" className="form-label">
-              Assignment Name
+              New Assignment
             </label>
           </div>
 

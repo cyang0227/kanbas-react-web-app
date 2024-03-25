@@ -7,6 +7,9 @@ const initialState = {
     name: "New Assignment", 
     description: "New Description",
     dueDate: new Date().toISOString(),
+    points: 100,
+    availableFromDate: new Date().toISOString(),
+    availableUntilDate: new Date().toISOString(),
    },
 };
 
@@ -34,12 +37,12 @@ const assignmentsSlice = createSlice({
         }
       });
     },
-    setAssignment: (state, action) => {
+    selectAsssignment: (state, action) => {
       state.assignment = action.payload;
     },
   },
 });
 
-export const { addAssignment, deleteAssignment, updateAssignment, setAssignment } =
+export const { addAssignment, deleteAssignment, updateAssignment, selectAsssignment } =
   assignmentsSlice.actions;
 export default assignmentsSlice.reducer;

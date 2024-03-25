@@ -40,6 +40,7 @@ function ModuleList() {
           <input
             value={module.name}
             size={50}
+            className="form-control"
             onChange={(e) =>
               dispatch(
                 setModule({
@@ -52,6 +53,7 @@ function ModuleList() {
           <br />
           <textarea
             value={module.description}
+            className="form-control"
             rows={4}
             cols={53}
             onChange={(e) =>
