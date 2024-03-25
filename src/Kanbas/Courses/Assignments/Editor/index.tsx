@@ -71,7 +71,7 @@ function AssignmentEditor() {
                 className="form-control"
                 id="due"
                 type="date"
-                value="2024-01-01"
+                defaultValue="2024-01-01"
               />
               <br />
               <div className="row">
@@ -93,7 +93,7 @@ function AssignmentEditor() {
                     className="form-control"
                     id="available-from"
                     type="date"
-                    value="2024-01-01"
+                    defaultValue="2024-01-01"
                   />
                 </div>
                 <div className="col-6">
@@ -101,7 +101,7 @@ function AssignmentEditor() {
                     className="form-control"
                     id="until"
                     type="date"
-                    value="2024-01-01"
+                    defaultValue="2024-05-31"
                   />
                 </div>
               </div>
