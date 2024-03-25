@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { modules } from "../../Database";
 import { useSelector, useDispatch } from "react-redux";
 import { addModule, deleteModule, updateModule, setModule } from "./reducer";
 import { KanbasState } from "../../store";

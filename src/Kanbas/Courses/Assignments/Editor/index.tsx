@@ -1,24 +1,34 @@
 import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { assignments } from "../../../Database";
+import { KanbasState } from "../../../store";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  selectAsssignment,
+  setAssignment,
+} from "../assignmentsReducer";
+
 function AssignmentEditor() {
   const { assignmentId } = useParams();
-  const assignment = assignments.find(
-    (assignment) => assignment._id === assignmentId
-  );
+  const assignment = useSelector((state: KanbasState) => state.assignmentReducer.assignment);
   const { courseId } = useParams();
   const navigate = useNavigate();
   const handleSave = () => {
     console.log("Actually saving assignment TBD in later assignments");
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
+  const dispatch = useDispatch();
+
   return (
     <div>
       <div className="d-flex p-2 mr-3">
         <div className="container-fluid">
           <div className="row">
             <label htmlFor="assignmentName" className="form-label">
-              New Assignment
+              Assignment Name
             </label>
           </div>
 
@@ -27,6 +37,14 @@ function AssignmentEditor() {
               id="assignmentName"
               value={assignment?.title}
               className="form-control"
+              onChange={(e) =>
+                dispatch(
+                  setAssignment({
+                    ...assignment,
+                    title: e.target.value,
+                  })
+                )
+              }
             />
           </div>
 
