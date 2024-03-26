@@ -6,10 +6,13 @@ function WorkingWithArrays() {
   return (
     <div>
       <h3>Woring with Arrays</h3>
-			<h3>Filtering Array Items</h3>
-			<a href={`${API}?completed=true`} className="btn btn-warning">
-				Get Completed Todos
-			</a>
+      <h3>Creating new Items in an Array</h3>
+      <a className="btn btn-primary" href={`${API}/create`}>Create Todo</a>
+
+      <h3>Filtering Array Items</h3>
+      <a href={`${API}?completed=true`} className="btn btn-warning">
+        Get Completed Todos
+      </a>
 
       <h4>Retrieving Arrays</h4>
       <a href={API} className="btn btn-primary">
@@ -18,10 +21,13 @@ function WorkingWithArrays() {
       <h4>Retrieving an Item from an Array by ID</h4>
       <input
         value={todo.id}
-        className="form-control" color="red"
+        className="form-control"
+        color="red"
         onChange={(e) => setTodo({ ...todo, id: parseInt(e.target.value) })}
       />
-      <a className="btn btn-primary" href={`${API}/${todo.id}`}>Get Todo by ID</a>
+      <a className="btn btn-primary" href={`${API}/${todo.id}`}>
+        Get Todo by ID
+      </a>
     </div>
   );
 }
